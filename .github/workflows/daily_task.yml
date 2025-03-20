@@ -2,7 +2,7 @@ name: Daily Python Script
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 14:00 執行（台灣時間 22:00）
+    - cron: '0 0 * * *'  # UTC 14:00 （ 22:00）
 
 jobs:
   run-script:
@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'  # 指定 Python 版本
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
